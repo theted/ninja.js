@@ -13,3 +13,18 @@ To get started:
 
 To run the tests:
 - `yarn run test`
+
+During the interview, you will be asked to take us through your changes and maybe do some live coding on the spot.
+
+# How to submit
+
+1. Fork this repo.
+
+2. Make a PR to your forked repo with your changes (make sure you make PR on your forked repo and not on this one - by default github will choose this repo as destination for PR)
+
+3. Send us link to the PR in your forked repo.
+
+# Tips
+
+Do not rewrite code to TypeScript. Purpose of this excercise is not to see if you can rewrite code to TypeScript.
+
