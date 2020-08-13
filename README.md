@@ -4,7 +4,7 @@ This project contains a simple React application to display a paginated table of
 
 The required features are working and have already been implemented, but the implementation can be improved in many different ways.
 
-Given the existing solution, refactor and tidy the code to what you believe would be a better implementation. The goal is to end up with a more flexible solution to be able to accommodate further required features.
+Given the existing solution, refactor and tidy the code to what you believe would be a best implementation. The goal is to end up with a more flexible solution to be able to accommodate further required features. Focus on best practices when it comes to react/state management/clean code.
 
 To get started:
 - clone
