@@ -22,9 +22,7 @@ During the interview, you will be asked to take us through your changes and mayb
 
 2. Make a PR to your forked repo with your changes (make sure you make PR on your forked repo and not on this one - by default github will choose this repo as destination for PR)
 
-3. If you chose to do public repo, send us link to the PR in your forked repo.
-
-If you choose to make private repo, add davidmilo, jacobjuul and kristiandupont as collaborators and send us link to it.
+3. If you chose to do public repo, send us link to the PR in your forked repo. If you choose to make private repo, add davidmilo, jacobjuul and kristiandupont as collaborators and send us link to it.
 
 # Tips
 
