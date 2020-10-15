@@ -1,6 +1,6 @@
-import React from 'react'
-import { shallow } from 'enzyme'
-import DataTable from '../'
+import React from 'react';
+import { shallow } from 'enzyme';
+import DataTable from '..';
 
 describe('DataTable Component', () => {
   it('renders without crashing', () => {

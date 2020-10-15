@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import Search from '../Search';
 
 const props = {
-  onSearch: () => {}
+  onSearch: () => {},
 };
 
 describe('Search component', () => {
