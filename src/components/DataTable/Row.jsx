@@ -5,9 +5,7 @@ const Row = ({ row }) => {
   return (
     <tr>
       <td>
-        <a href={row.edit_path}>
-          {row.name1}
-        </a>
+        <a href={row.edit_path}>{row.name1}</a>
         <br />
         <small>{row.email}</small>
       </td>
@@ -17,6 +15,6 @@ const Row = ({ row }) => {
 
 Row.propTypes = {
   row: PropTypes.arrayOf(PropTypes.object).isRequired,
-}
+};
 
 export default Row;
