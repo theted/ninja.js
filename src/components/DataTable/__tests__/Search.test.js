@@ -2,17 +2,15 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Search from '../Search';
 
-const props = {
-  onSearch: () => {},
-};
+const onSearch = () => {};
 
 describe('Search component', () => {
   it('renders without crashing', () => {
-    shallow(<Search {...props} />);
+    shallow(<Search onSearch={onSearch} />);
   });
 
   it('matches snapshot', () => {
-    const component = shallow(<Search {...props} />);
+    const component = shallow(<Search onSearch={onSearch} />);
     expect(component).toMatchSnapshot();
   });
 });

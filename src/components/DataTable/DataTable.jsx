@@ -1,27 +1,23 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Pagination from './Pagination';
 import Row from './Row';
 import Search from './Search';
 
 class DataTable extends React.Component {
-  state = {
-    rows: this.props.rows,
-    currentPageNumber: 0,
-    totalNumberOfPages: this.calculateTotalNumberOfPages(this.props.rows),
+  
+  constructor(props) {
+    super(props)
+    const { rows } = props
+    this.state = {
+      rows,
+      currentPageNumber: 0,
+      totalNumberOfPages: this.calculateTotalNumberOfPages(rows),
+    }
   }
 
-  static defaultProps = {
-    rowsPerPage: 40,
-  }
-
-  calculateTotalNumberOfPages(rows) {
-    const { rowsPerPage } = this.props;
-    if (rowsPerPage == 0 || !rows) return 0;
-    return Math.ceil(rows.length / rowsPerPage);
-  }
-
-  search(event) {
+  search = event => {
     const { rows } = this.props;
     const text = event.target.value;
     let rowsFound = rows;
@@ -38,10 +34,16 @@ class DataTable extends React.Component {
     });
   }
 
-  changeToPageNumber(pageNumber) {
+  changeToPageNumber = pageNumber => {
     this.setState({ currentPageNumber: pageNumber });
   }
 
+  calculateTotalNumberOfPages(rows) {
+    const { rowsPerPage } = this.props;
+    if (rowsPerPage === 0 || !rows) return 0;
+    return Math.ceil(rows.length / rowsPerPage);
+  }
+ 
   rowsInPageNumber(pageNumber) {
     const { rowsPerPage } = this.props;
     const startIndex = pageNumber * rowsPerPage;
@@ -51,7 +53,7 @@ class DataTable extends React.Component {
   render() {
     const { rows, currentPageNumber, totalNumberOfPages } = this.state;
 
-    if (!rows) return;
+    if (!rows) return null;
 
     const rowsToRender = rows
       .map((row) => <Row key={row.per_id} row={row} />)
@@ -59,7 +61,7 @@ class DataTable extends React.Component {
 
     return (
       <div>
-        <Search onSearch={this.search.bind(this)} />
+        <Search onSearch={this.search} />
         <table>
           <tbody>
             { rowsToRender }
@@ -68,11 +70,20 @@ class DataTable extends React.Component {
         <Pagination
           currentPageNumber={currentPageNumber}
           totalNumberOfPages={totalNumberOfPages}
-          onChange={this.changeToPageNumber.bind(this)}
+          onChange={this.changeToPageNumber}
         />
       </div>
     );
   }
+}
+
+DataTable.propTypes = {
+  rows: PropTypes.arrayOf(PropTypes.shape()).isRequired,
+  rowsPerPage: PropTypes.number,
+}
+
+DataTable.defaultProps = {
+  rowsPerPage: 40,
 }
 
 export default DataTable;

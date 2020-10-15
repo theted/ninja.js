@@ -35,5 +35,13 @@
   "globals": {
     "require": true,
     "it": true
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.test.js"],
+      "rules": {
+        "react/jsx-props-no-spreading": "off"
+      }
+    }
+  ]
 }

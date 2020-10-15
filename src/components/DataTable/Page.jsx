@@ -1,8 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Page = (props) => {
-  const { pageNumber, currentPageNumber, onChange } = props;
-
+const Page = ({ pageNumber, currentPageNumber, onChange }) => {
   const isActivePage = () => currentPageNumber === pageNumber;
 
   const renderedPageNumber = () => pageNumber + 1;
@@ -16,9 +15,15 @@ const Page = (props) => {
 
   return (
     <li className="page-item mr-1">
-      <button className={className} onClick={click}>{renderedPageNumber()}</button>
+      <button className={className} onClick={click} type="button">{renderedPageNumber()}</button>
     </li>
   );
 };
+
+Page.propTypes = {
+  pageNumber: PropTypes.number.isRequired,
+  currentPageNumber: PropTypes.number.isRequired,
+  onChange: PropTypes.func.isRequired,
+}
 
 export default Page;
