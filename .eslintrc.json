@@ -5,7 +5,7 @@
     "jest": true
   },
   "parser": "babel-eslint",
-  "extends": "eslint:recommended",
+  "extends": ["airbnb", "prettier", "eslint:recommended"],
   "parserOptions": {
     "ecmaVersion": 8,
     "ecmaFeatures": {
@@ -14,9 +14,7 @@
     },
     "sourceType": "module"
   },
-  "plugins": [
-    "react"
-  ],
+  "plugins": ["react", "prettier"],
   "rules": {
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
@@ -31,7 +29,8 @@
     "quotes": [
       "error",
       "single"
-    ]
+    ],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
   },
   "globals": {
     "require": true,
