@@ -5,8 +5,8 @@ import Pagination from '../Pagination';
 const props = {
   currentPageNumber: 1,
   totalNumberOfPages: 5,
-  onChange: () => {}
-}
+  onChange: () => {},
+};
 
 describe('Pagination component', () => {
   it('renders without crashing', () => {

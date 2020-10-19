@@ -3,5 +3,5 @@ import Adapter from 'enzyme-adapter-react-16';
 
 configure({
   adapter: new Adapter(),
-  snapshotSerializers: ['enzyme-to-json/serializer']
+  snapshotSerializers: ['enzyme-to-json/serializer'],
 });
