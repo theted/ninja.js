@@ -42,12 +42,16 @@
   "jest": {
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
-    ]
+    ],
+    "setupFilesAfterEnv": ["./src/setupTests.js"],
+    "moduleNameMapper": {
+      "\\.(css)$": "<rootDir>/__mocks__/styleMock.js"
+    }
   },
   "husky": {
     "hooks": {
       "pre-commit": "yarn run lint",
-      "pre-push": "yarn run test"
+      "pre-push": "jest"
     }
   }
 }
