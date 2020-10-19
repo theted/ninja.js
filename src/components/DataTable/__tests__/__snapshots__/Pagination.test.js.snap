@@ -1,3 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Pagination component matches snapshot 1`] = `""`;
+exports[`Pagination component matches snapshot 1`] = `
+<ul
+  className="pagination"
+>
+  <Page
+    currentPageNumber={1}
+    key="0"
+    onChange={[Function]}
+    pageNumber={0}
+  />
+  <Page
+    currentPageNumber={1}
+    key="1"
+    onChange={[Function]}
+    pageNumber={1}
+  />
+  <Page
+    currentPageNumber={1}
+    key="2"
+    onChange={[Function]}
+    pageNumber={2}
+  />
+  <Page
+    currentPageNumber={1}
+    key="3"
+    onChange={[Function]}
+    pageNumber={3}
+  />
+  <Page
+    currentPageNumber={1}
+    key="4"
+    onChange={[Function]}
+    pageNumber={4}
+  />
+</ul>
+`;

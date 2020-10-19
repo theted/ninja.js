@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import Row from '../Row';
 import data from '../../../data/users.json';
 
@@ -11,14 +11,7 @@ describe('Row component', () => {
   });
 
   it('matches snapshot', () => {
-    // TODO: fix table wrap fix
-    const component = mount(
-      <table>
-        <tbody>
-          <Row row={row} />
-        </tbody>
-      </table>,
-    );
+    const component = shallow(<Row row={row} />);
     expect(component).toMatchSnapshot();
   });
 });
