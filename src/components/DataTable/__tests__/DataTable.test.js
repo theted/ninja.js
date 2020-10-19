@@ -49,4 +49,9 @@ describe('DataTable Component', () => {
 
     expect(wrapper.find('tr').length).toBe(5);
   });
+
+  it('return correct number of pages', () => {
+    const wrapper = mount(<DataTable {...props} rowsPerPage={3} />);
+    expect(wrapper.find('li').length).toBe(2);
+  });
 });

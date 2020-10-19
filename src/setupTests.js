@@ -1,7 +1,8 @@
-import { configure } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+/* eslint-disable import/no-extraneous-dependencies */
+import Enzyme from 'enzyme';
+import ReactSixteenAdapter from 'enzyme-adapter-react-16';
 
-configure({
-  adapter: new Adapter(),
+Enzyme.configure({
+  adapter: new ReactSixteenAdapter(),
   snapshotSerializers: ['enzyme-to-json/serializer'],
 });
