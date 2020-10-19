@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page component matches snapshot 1`] = `
+<li
+  className="page-item mr-1"
+>
+  <button
+    className=" button-outline"
+    onClick={[Function]}
+    type="button"
+  >
+    1
+  </button>
+</li>
+`;

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search component matches snapshot 1`] = `
+<div
+  className="p-b-1"
+>
+  <input
+    className="form-control"
+    onChange={[Function]}
+    placeholder="Søg brugere"
+    type="search"
+  />
+</div>
+`;

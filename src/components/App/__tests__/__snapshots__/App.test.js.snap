@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component matches snapshot 1`] = `
+<div
+  className="container mt-3"
+>
+  <DataTable
+    locale="da"
+    rows={
+      Array [
+        Object {
+          "edit_path": "http://google.com",
+          "email": "MadsLKlausen@jourrapide.com",
+          "name1": "Mads L. Klausen",
+          "per_id": 1,
+        },
+        Object {
+          "edit_path": "http://google.com",
+          "email": "AlfredKKrogh@armyspy.com",
+          "name1": "Alfred K. Krogh",
+          "per_id": 2,
+        },
+        Object {
+          "edit_path": "http://google.com",
+          "email": "SilasLBertelsen@armyspy.com",
+          "name1": "Silas L. Bertelsen",
+          "per_id": 3,
+        },
+        Object {
+          "edit_path": "http://google.com",
+          "email": "MiaAJohnsen@dayrep.com",
+          "name1": "Mia A. Johnsen",
+          "per_id": 4,
+        },
+        Object {
+          "edit_path": "http://google.com",
+          "email": "AlfredSSchou@jourrapide.com",
+          "name1": "Alfred S. Schou",
+          "per_id": 5,
+        },
+      ]
+    }
+    rowsPerPage={5}
+  />
+</div>
+`;
