@@ -1,3 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Row component matches snapshot 1`] = `ShallowWrapper {}`;
+exports[`Row component matches snapshot 1`] = `
+<table>
+  <tbody>
+    <Row
+      row={
+        Object {
+          "edit_path": "http://google.com",
+          "email": "MadsLKlausen@jourrapide.com",
+          "name1": "Mads L. Klausen",
+          "per_id": 1,
+        }
+      }
+    >
+      <tr>
+        <td>
+          <a
+            href="http://google.com"
+          >
+            Mads L. Klausen
+          </a>
+          <br />
+          <small>
+            MadsLKlausen@jourrapide.com
+          </small>
+        </td>
+      </tr>
+    </Row>
+  </tbody>
+</table>
+`;
