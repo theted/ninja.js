@@ -20,9 +20,15 @@ const Pagination = ({ currentPageNumber, totalNumberOfPages, onChange }) => {
 };
 
 Pagination.propTypes = {
-  currentPageNumber: PropTypes.number.isRequired,
-  totalNumberOfPages: PropTypes.number.isRequired,
-  onChange: PropTypes.func.isRequired,
+  currentPageNumber: PropTypes.number,
+  totalNumberOfPages: PropTypes.number,
+  onChange: PropTypes.func,
+};
+
+Pagination.defaultProps = {
+  currentPageNumber: 0,
+  totalNumberOfPages: 0,
+  onChange: () => {},
 };
 
 export default Pagination;

@@ -12,7 +12,7 @@ const App = ({ rows }) => {
 };
 
 App.propTypes = {
-  rows: PropTypes.shape().isRequired,
+  rows: PropTypes.arrayOf(PropTypes.shape()).isRequired,
 };
 
 export default App;

@@ -23,9 +23,15 @@ const Page = ({ pageNumber, currentPageNumber, onChange }) => {
 };
 
 Page.propTypes = {
-  pageNumber: PropTypes.number.isRequired,
-  currentPageNumber: PropTypes.number.isRequired,
-  onChange: PropTypes.func.isRequired,
+  pageNumber: PropTypes.number,
+  currentPageNumber: PropTypes.number,
+  onChange: PropTypes.func,
+};
+
+Page.defaultProps = {
+  pageNumber: 0,
+  currentPageNumber: 0,
+  onChange: () => {},
 };
 
 export default Page;
